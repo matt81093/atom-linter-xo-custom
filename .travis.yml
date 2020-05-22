@@ -6,6 +6,7 @@ node_js:
   - '10'
 env:
   - APM_TEST_PACKAGES="linter"
+env:
   global:
     - CC=clang
     - CXX=clang++
