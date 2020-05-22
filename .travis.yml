@@ -1,6 +1,10 @@
+os:
+  - linux
+  - windows
 language: node_js
 node_js:
-  - 'node'
+  - '12'
+  - '10'
 env:
   global:
     - CC=clang
@@ -19,3 +23,5 @@ addons:
     - fakeroot
     - git
     - libsecret-1-dev
+after_success:
+  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
