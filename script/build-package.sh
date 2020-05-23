@@ -136,10 +136,6 @@ else
 	npm --version
 	echo "Installing remaining dependencies..."
 	npm install
-
-	# Recompile packages
-	echo "Recompiling..."
-	npm rebuild
 fi
 
 if [ -n "${APM_TEST_PACKAGES}" ]; then
@@ -148,6 +144,10 @@ if [ -n "${APM_TEST_PACKAGES}" ]; then
 		"${APM_SCRIPT_PATH}" install "${pack}"
 	done
 fi
+
+# Recompile packages
+echo "Recompiling..."
+npm rebuild
 
 has_linter() {
 	${NPM_SCRIPT_PATH} ls --parseable --dev --depth=0 "$1" 2> /dev/null | grep -q "$1$"
