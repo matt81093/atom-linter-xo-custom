@@ -1,5 +1,6 @@
 os:
   - linux
+  - osx
 language: node_js
 node_js:
   - '12'
@@ -8,11 +9,23 @@ env:
   global:
     - CC=clang
     - CXX=clang++
-install:
+    - APM_TEST_PACKAGES=""
+    - ATOM_LINT_WITH_BUNDLED_NODE="true"
+  matrix:
+    - ATOM_CHANNEL=stable
+
+install: false
+script:
   - chmod u+x ./script/build-package.sh
   - ./script/build-package.sh
-script:
   - npm run test
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+branches:
+  only:
+    - update-dev
 addons:
   apt:
     packages:

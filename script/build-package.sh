@@ -134,8 +134,12 @@ else
 	node --version
 	echo "Using NPM version:"
 	npm --version
-	echo "Installing remaining dependencies..."
+	echo "Installing xo..."
+	npm install xo
+	echo "and remaining dependencies..."
 	npm install
+	echo "Upgrading packages to latest"
+	apm upgrade --confirm false
 fi
 
 if [ -n "${APM_TEST_PACKAGES}" ]; then
@@ -145,8 +149,12 @@ if [ -n "${APM_TEST_PACKAGES}" ]; then
 	done
 fi
 
+# Fix npm node prefix
+nodeVersion = node --version
+npm config delete prefix
+npm config set prefix $NVM_DIR/versions/node/${nodeVersion}
 # Recompile packages
-echo "Recompiling..."
+echo "Recompiling from source..."
 npm rebuild --build-from-source
 
 has_linter() {
