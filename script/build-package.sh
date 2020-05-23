@@ -147,7 +147,7 @@ fi
 
 # Recompile packages
 echo "Recompiling..."
-npm rebuild
+npm rebuild --build-from-source
 
 has_linter() {
 	${NPM_SCRIPT_PATH} ls --parseable --dev --depth=0 "$1" 2> /dev/null | grep -q "$1$"
