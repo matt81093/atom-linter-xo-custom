@@ -9,11 +9,9 @@ env:
     - CC=clang
     - CXX=clang++
 install:
-  - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
-  - chmod u+x build-package.sh
-  - ./build-package.sh
+  - chmod u+x ./script/build-package.sh
+  - ./script/build-package.sh
 script:
-  - npm rebuild
   - npm run test
 addons:
   apt:
