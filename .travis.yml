@@ -25,7 +25,7 @@ notifications:
     on_failure: change
 branches:
   only:
-    - update-dev
+    - update-dep
 addons:
   apt:
     packages:
