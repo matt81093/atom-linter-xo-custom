@@ -1,6 +1,6 @@
 {
 	"name": "linter-xo",
-	"version": "0.29.0",
+	"version": "0.30.1",
 	"description": "Linter for XO",
 	"license": "MIT",
 	"repository": "xojs/atom-linter-xo",
@@ -18,16 +18,40 @@
 		"pretest": "npm run lint",
 		"test": "ava"
 	},
+	"files": [
+		"lib",
+		"mocks",
+		"script",
+		"spec",
+		"_test",
+		"*.js"
+	],
 	"keywords": [
-		"javascript",
+		"xo",
+		"xoxo",
+		"happy",
+		"happiness",
+		"lint",
 		"linter",
 		"eslint",
+		"jshint",
+		"jslint",
+		"javascript",
+		"typescript",
+		"code",
 		"code-style",
-		"xo"
+		"style",
+		"quality",
+		"validate",
+		"code style",
+		"standard",
+		"strict",
+		"check",
+		"checker"
 	],
 	"dependencies": {
-		"atom-linter": "^10.0.0",
-		"atom-package-deps": "^5.0.0",
+		"atom-linter": "^2.2.0",
+		"atom-package-deps": "^0.1.2",
 		"eslint-rule-documentation": "^1.0.0",
 		"load-json-file": "^6.2.0",
 		"p-props": "^4.0.0",
@@ -43,12 +67,12 @@
 		"tmp": "0.2.1"
 	},
 	"package-deps": [
-		"linter:2.0.0"
+		"linter:2.2.0"
 	],
 	"providedServices": {
 		"linter": {
 			"versions": {
-				"2.0.0": "provideLinter"
+				"2.2.0": "provideLinter"
 			}
 		}
 	},

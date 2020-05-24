@@ -9,10 +9,9 @@ env:
   global:
     - CC=clang
     - CXX=clang++
-    - APM_TEST_PACKAGES=""
     - ATOM_LINT_WITH_BUNDLED_NODE="true"
-  matrix:
-    - ATOM_CHANNEL=stable
+    - ATOM_CHANNEL="stable"
+    # - APM_TEST_PACKAGES=""
 
 install: false
 script:
