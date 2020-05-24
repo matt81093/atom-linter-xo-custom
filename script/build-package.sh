@@ -8,9 +8,9 @@ else
 fi
 
 if [ "${ATOM_LINT_WITH_BUNDLED_NODE}" ]; then
-	ATOM_LINT_WITH_BUNDLED_NODE=true
+	ATOM_LINT_WITH_BUNDLED_NODE="true"
 else
-	ATOM_LINT_WITH_BUNDLED_NODE=false
+	ATOM_LINT_WITH_BUNDLED_NODE="false"
 fi
 
 if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
