@@ -16,7 +16,7 @@ env:
 install: false
 script:
   - chmod u+x ./script/build-package.sh
-  - ./script/build-package.sh
+  - . ./script/build-package.sh
   - npm run test
 notifications:
   email:

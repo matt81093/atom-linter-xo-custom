@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # ATOM_CHANNEL="${ATOM_CHANNEL:=stable}"
-if [ "${ATOM_CHANNEL}" ]; then
+if [ "${ATOM_CHANNEL}" = "stable" ]; then
 	ATOM_CHANNEL="${ATOM_CHANNEL}"
 else
 	ATOM_CHANNEL="${ATOM_CHANNEL:=stable}"
 fi
 
-if [ "${ATOM_LINT_WITH_BUNDLED_NODE}" ]; then
+if [ "${ATOM_LINT_WITH_BUNDLED_NODE}" = "true" ]; then
 	ATOM_LINT_WITH_BUNDLED_NODE="true"
 else
 	ATOM_LINT_WITH_BUNDLED_NODE="false"
@@ -175,12 +175,7 @@ else
 	node --version
 	echo "Using NPM version:"
 	npm --version
-	# echo "Installing xo..."
-	# npm install xo
-	# echo "and remaining dependencies..."
 	npm install
-	# echo "Upgrading packages to latest"
-	# apm upgrade --confirm false
 fi
 
 if [ -n "${APM_TEST_PACKAGES}" ]; then
