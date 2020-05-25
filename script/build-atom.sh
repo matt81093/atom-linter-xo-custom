@@ -131,5 +131,3 @@ echo "Using Atom version:"
 "${ATOM_SCRIPT_PATH}" -v
 echo "Using APM version:"
 "${APM_SCRIPT_PATH}" -v
-
-exit

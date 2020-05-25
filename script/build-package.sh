@@ -118,4 +118,3 @@ else
 	echo "Missing spec folder! Please consider adding a test suite in './spec' or in './test'"
 	exit 0
 fi
-exit
