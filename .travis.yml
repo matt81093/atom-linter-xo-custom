@@ -1,6 +1,7 @@
 os:
   - linux
   - osx
+  # - windows
 language: node_js
 node_js:
   - '12'
@@ -13,10 +14,16 @@ env:
     - ATOM_CHANNEL="stable"
     # - APM_TEST_PACKAGES=""
 
-install: false
-script:
+before_install:
+  - chmod u+x ./script/build-atom.sh
+  - ./script/build-atom.sh
+install:
   - chmod u+x ./script/build-package.sh
-  - . ./script/build-package.sh
+  - ./script/build-package.sh
+script:
+  - npm rebuild
+  - chmod u+x ./script/build-spec.sh
+  - ./script/build-spec.sh
   - npm run test
 notifications:
   email:
