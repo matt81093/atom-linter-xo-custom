@@ -60,6 +60,6 @@ case "${SYSTEMOS}" in
 		;;
 	*)
 		npm rebuild
-		"${APM_SCRIPT_PATH}"/electron-rebuild
+		"${APM_SCRIPT_PATH}" electron-rebuild
 		;;
 esac
