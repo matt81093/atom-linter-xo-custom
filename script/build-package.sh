@@ -56,10 +56,13 @@ echo "Rebuilding packages for correct NodeJS version..."
 case "${SYSTEMOS}" in
 	"windows")
 		npm rebuild
-		"${APM_SCRIPT_PATH}"\electron-rebuild.cmd
+		"${PATH}"\electron-rebuild.cmd
 		;;
 	*)
+		ls
+		echo "Rebuild Phase 1"
 		npm rebuild
-		"${APM_SCRIPT_PATH}" electron-rebuild
+		echo "Rebuild Phase 2"
+		electron-rebuild
 		;;
 esac
