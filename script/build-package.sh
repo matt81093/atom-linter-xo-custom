@@ -52,6 +52,10 @@ if [ -n "${APM_TEST_PACKAGES}" ]; then
 	done
 fi
 
+echo "# of rows"
+awk "{print NF}"
+ELECTRON_VERSION="${ATOM_SCRIPT_PATH}" -v | awk '{ if ($1 == "Electron") { print $3} }'
+
 echo "Rebuilding packages for correct NodeJS version..."
 case "${SYSTEMOS}" in
 	"windows")
@@ -59,10 +63,7 @@ case "${SYSTEMOS}" in
 		"${PATH}"\electron-rebuild.cmd
 		;;
 	*)
-		ls
-		echo "Rebuild Phase 1"
 		npm rebuild
-		echo "Rebuild Phase 2"
-		electron-rebuild
+		electron-rebuild -v "${ELECTRON_VERSION}"
 		;;
 esac
