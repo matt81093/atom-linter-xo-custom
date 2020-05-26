@@ -21,8 +21,6 @@ install:
   - chmod u+x ./script/build-package.sh
   - . ./script/build-package.sh
 script:
-  - chmod u+x ./script/build-rebuild.sh
-  - . ./script/build-rebuild.sh
   - chmod u+x ./script/build-spec.sh
   - . ./script/build-spec.sh
   - npm run test
