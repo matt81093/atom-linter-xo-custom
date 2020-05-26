@@ -52,14 +52,17 @@ if [ -n "${APM_TEST_PACKAGES}" ]; then
 	done
 fi
 
-echo "Rebuilding packages for correct NodeJS version..."
 case "${SYSTEMOS}" in
 	"windows")
+		echo "Rebuilding packages for correct NodeJS version..."
 		npm rebuild
+		echo "Rebuilding packages against Electron version of Node.js"
 		"${PATH}"\electron-rebuild.cmd
 		;;
 	*)
+		echo "Rebuilding packages for correct NodeJS version..."
 		npm rebuild
+		echo "Rebuilding packages against Electron version of Node.js"
 		awkp='
 			{
 				if ($1 == "Electron") {
