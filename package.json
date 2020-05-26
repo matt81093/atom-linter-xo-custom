@@ -57,6 +57,7 @@
 		"p-props": "~4.0.0",
 		"pkg-dir": "~4.2.0",
 		"resolve-from": "~5.0.0",
+		"require-rebuild": "~1.2.0",
 		"xo": "~0.30.0"
 	},
 	"devDependencies": {

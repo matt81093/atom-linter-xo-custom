@@ -56,14 +56,14 @@ case "${SYSTEMOS}" in
 	"windows")
 		# echo "Rebuilding packages for correct NodeJS version..."
 		npm rebuild
-		echo "Rebuilding packages against Electron version of Node.js"
-		"${PATH}"\electron-rebuild.cmd
+		#echo "Rebuilding packages against Electron version of Node.js"
+		#"${PATH}"\electron-rebuild.cmd
 		;;
 	*)
 		# echo "Rebuilding packages for correct NodeJS version..."
 		npm rebuild
-		$(npm bin)/electron-rebuild
-		echo "Rebuilding packages against Electron version of Node.js"
+		#$(npm bin)/electron-rebuild
+		#echo "Rebuilding packages against Electron version of Node.js"
 		awkp='
 			{
 				if ($1 == "Electron") {
@@ -71,7 +71,7 @@ case "${SYSTEMOS}" in
 				}
 			}
 			'
-		"${ATOM_SCRIPT_PATH}" -v | awk "${awkp}" | /bin/sh
+		#"${ATOM_SCRIPT_PATH}" -v | awk "${awkp}" | /bin/sh
 		 # awk '{ if ($1 == "Electron") { print $3 | electron-rebuild -v $3} }'
 		;;
 esac

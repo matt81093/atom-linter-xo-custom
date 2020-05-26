@@ -5,6 +5,8 @@ import fix from './lib/fix';
 import format from './lib/format';
 import lint from './lib/lint';
 
+require('require-rebuild')();
+
 const SUPPORTED_SCOPES = [
 	'source.js',
 	'source.jsx',
