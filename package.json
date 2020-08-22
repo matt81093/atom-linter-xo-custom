@@ -63,7 +63,7 @@
 	"devDependencies": {
 		"@babel/register": "^7.9.0",
 		"ava": "^3.8.0",
-		"electron-rebuild": "^1.11.0",
+		"electron-rebuild": "^2.0.0",
 		"proxyquire": "^2.1.0",
 		"text-buffer": "^13.17.0",
 		"tmp": "^0.2.0"
