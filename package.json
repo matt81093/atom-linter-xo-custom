@@ -58,7 +58,7 @@
 		"pkg-dir": "~4.2.0",
 		"resolve-from": "~5.0.0",
 		"require-rebuild": "~1.2.0",
-		"xo": "~0.30.0"
+		"xo": "~0.33.1"
 	},
 	"devDependencies": {
 		"@babel/register": "^7.9.0",
