@@ -54,7 +54,7 @@
 		"atom-package-deps": "~5.1.0",
 		"eslint-rule-documentation": "~1.0.0",
 		"load-json-file": "~6.2.0",
-		"p-props": "~4.0.0",
+		"p-props": "~5.0.0",
 		"pkg-dir": "~4.2.0",
 		"resolve-from": "~5.0.0",
 		"require-rebuild": "~1.2.0",
